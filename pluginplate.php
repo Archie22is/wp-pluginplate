@@ -11,8 +11,17 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
  */
- 
+
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-pluginplate.php';
+
+function run_pluginplate() {
+    $pp = new Pluginplate();
+    $pp->run();
+}
+
+run_pluginplate();
 
